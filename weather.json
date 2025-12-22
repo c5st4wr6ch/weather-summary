@@ -1,0 +1,51 @@
+{
+    "location": {
+        "name": "Jakarta",
+        "region": "Jakarta Raya",
+        "country": "Indonesia",
+        "lat": -6.2146,
+        "lon": 106.8451,
+        "tz_id": "Asia/Jakarta",
+        "localtime_epoch": 1766315046,
+        "localtime": "2025-12-21 18:04"
+    },
+    "current": {
+        "last_updated_epoch": 1766314800,
+        "last_updated": "2025-12-21 18:00",
+        "temp_c": 29.1,
+        "temp_f": 84.4,
+        "is_day": 1,
+        "condition": {
+            "text": "Patchy light rain with thunder",
+            "icon": "//cdn.weatherapi.com/weather/64x64/day/386.png",
+            "code": 1273
+        },
+        "wind_mph": 10.3,
+        "wind_kph": 16.6,
+        "wind_degree": 286,
+        "wind_dir": "WNW",
+        "pressure_mb": 1005.0,
+        "pressure_in": 29.68,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 79,
+        "cloud": 75,
+        "feelslike_c": 30.5,
+        "feelslike_f": 86.8,
+        "windchill_c": 31.9,
+        "windchill_f": 89.4,
+        "heatindex_c": 35.2,
+        "heatindex_f": 95.3,
+        "dewpoint_c": 20.9,
+        "dewpoint_f": 69.6,
+        "vis_km": 7.0,
+        "vis_miles": 4.0,
+        "uv": 0.0,
+        "gust_mph": 11.9,
+        "gust_kph": 19.2,
+        "short_rad": 511.26,
+        "diff_rad": 83.35,
+        "dni": 458.71,
+        "gti": 523.63
+    }
+}

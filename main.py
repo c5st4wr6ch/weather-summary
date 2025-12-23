@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 def get_weather_summary(temperature, condition):
     """Return a weather summary string."""
     return f"Temperature: {temperature}°C, Condition: {condition}"

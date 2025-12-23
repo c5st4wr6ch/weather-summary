@@ -10,23 +10,39 @@ def get_weather(city="Jakarta"):
         "key": os.getenv("WEATHER_API_KEY"),
         "q": city,
     }
-    url2="https://api.weatherapi.com/v1/current.json?key=" + os.getenv("WEATHER_API_KEY") + "&q=" + city
-    print(url2)
-    # data = requests.get(url, params=params, timeout=10).json()
-    data = requests.get(url2).json()
-    print(data)
-    # day = data["forecast"]["forecastday"][0]["day"]
+    data = requests.get(url, params=params, timeout=10).json()
 
-    # res_weather = {
-    #     "city": data["location"]["name"],
-    #     "temp_avg": day["avgtemp_c"],
-    #     "temp_max": day["maxtemp_c"],
-    #     "temp_min": day["mintemp_c"],
-    #     "rain_chance": day["daily_chance_of_rain"],
-    #     "condition": day["condition"]["text"]
-    # }
-    # return res_weather
+    res_weather = {
+        "city": data["location"]["name"],
+        "country": data["location"]["country"],
+        "lat": data["location"]["lat"],
+        "lon": data["location"]["lon"],
+        "tz_id": data["location"]["tz_id"],
+        "localtime_epoch": data["location"]["localtime_epoch"],
+        "localtime": data["location"]["localtime"],
 
-if __name__ == "__main__":
-    result = get_weather("Jakarta")
-    print(result)
+        "temp_c": data["current"]["temp_c"],
+        "is_day": data["current"]["is_day"],
+        "condition": {
+            "text": data["current"]["condition"]["text"],
+            "icon": data["current"]["condition"]["icon"],
+            "code": data["current"]["condition"]["code"],
+        },
+        "wind_kph": data["current"]["wind_kph"],
+        "pressure_mb": data["current"]["pressure_mb"],
+        "precip_mm": data["current"]["precip_mm"],
+        "humidity": data["current"]["humidity"],
+        "cloud": data["current"]["cloud"],
+        "feelslike_c": data["current"]["feelslike_c"],
+        "windchill_c": data["current"]["windchill_c"],
+        "heatindex_c": data["current"]["heatindex_c"],
+        "dewpoint_c": data["current"]["dewpoint_c"],
+        "vis_km": data["current"]["vis_km"],
+        "gust_kph": data["current"]["gust_kph"],
+        "short_rad": data["current"]["short_rad"],
+        "diff_rad": data["current"]["diff_rad"],
+        "dni": data["current"]["dni"],
+        "gti": data["current"]["gti"],
+    }
+
+    return res_weather
